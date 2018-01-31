@@ -502,3 +502,9 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+
+###########################################
+
+# ts build path
+bin/
