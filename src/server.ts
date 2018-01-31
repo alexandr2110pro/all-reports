@@ -1,10 +1,22 @@
-import { NestFactory } from '@nestjs/core';
-import { ApplicationModule } from './app/app.module';
-import {INestApplication} from '@nestjs/common/interfaces/nest-application.interface';
+import {NestFactory} from '@nestjs/core';
+import {SwaggerModule, DocumentBuilder} from '@nestjs/swagger';
+import {ApplicationModule} from './app/app.module';
 
-const app: Promise<INestApplication> = NestFactory.create(ApplicationModule);
-app.then(instance =>
-  instance.listen(3000, () =>
-    console.log('Application is listening on port 3000')
-  )
-);
+async function bootstrap() {
+  const app = await NestFactory.create(ApplicationModule);
+
+  const options = new DocumentBuilder()
+    .setTitle('all-reports')
+    .setDescription('All Reports REST API')
+    .setVersion('1.0')
+    .addTag('all-reports')
+    .build();
+
+  const document = SwaggerModule.createDocument(app, options);
+
+  SwaggerModule.setup('/api', app, document);
+
+  await app.listen(3001);
+}
+
+bootstrap();
