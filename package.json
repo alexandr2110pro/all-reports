@@ -9,8 +9,8 @@
   "scripts": {
     "build": "tsc",
     "heroku-postbuild": "yarn build",
-    "test": "NODE_ENV=test node ./scripts/test.js --forceExit # express server fails to end process",
-    "posttest": "mv ./testArtifacts/lcov-report/* $CIRCLE_ARTIFACTS",
+    "test:watch": "NODE_ENV=test node ./scripts/test.js --forceExit # express server fails to end process",
+    "test": "NODE_ENV=test CI=true node ./scripts/test.js --coverage --forceExit # express server fails to end process",
     "start": "node index.js",
     "watch": "tsc -w",
     "serve": "nodemon -e ts --watch src --exec \"yarn build && yarn start\" "
@@ -47,6 +47,7 @@
     "@types/supertest": "^2.0.4",
     "jest": "^22.1.4",
     "nodemon": "^1.11.0",
+    "superagent": "^3.8.2",
     "supertest": "^3.0.0",
     "ts-jest": "^22.0.2"
   },

@@ -508,3 +508,4 @@ $RECYCLE.BIN/
 
 # ts build path
 bin/
+testArtifacts/
