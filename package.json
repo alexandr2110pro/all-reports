@@ -22,12 +22,13 @@
     "@nestjs/testing": "^4.0.2",
     "@nestjs/websockets": "^4.0.2",
     "jsonwebtoken": "^8.1.1",
-    "mongoose": "^5.0.2",
     "mockgoose-fix": "^7.3.6",
+    "mongoose": "^5.0.2",
     "passport": "^0.4.0",
     "passport-jwt": "^3.0.1",
     "reflect-metadata": "^0.1.10",
     "rxjs": "^5.4.3",
+    "ts-node": "^4.1.0",
     "tsc": "^1.20150623.0",
     "typescript": "^2.7.1"
   },
@@ -42,8 +43,7 @@
     "jest": "^22.1.4",
     "nodemon": "^1.11.0",
     "supertest": "^3.0.0",
-    "ts-jest": "^22.0.2",
-    "ts-node": "^3.3.0"
+    "ts-jest": "^22.0.2"
   },
   "jest": {
     "transform": {
