@@ -20,7 +20,7 @@ export const databaseProviders = [
         await mockgoose
           .prepareStorage()
           .then(async () => {
-            await mongoose.connect(MONGODB_URI, CONNECTION_OPTIONS);
+            await mongoose.connect('mongodb://user:pass@fake-db.com:19258', CONNECTION_OPTIONS);
           });
 
       } else {
