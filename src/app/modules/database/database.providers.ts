@@ -4,7 +4,6 @@ import { DATABASE_CONNECTION_TOKEN } from './database.constants';
 
 const IS_TEST = process.env.NODE_ENV === 'test';
 const MONGODB_URI = process.env.MONGODB_URI_ALL_REPORTS || process.env.MONGODB_URI;
-
 const CONNECTION_OPTIONS = {};
 
 export const databaseProviders = [
