@@ -10,9 +10,7 @@
     "build": "tsc",
     "heroku-postbuild": "yarn build",
     "test:watch": "NODE_ENV=test node ./scripts/test.js --forceExit # express server fails to end process",
-    "pretest": "cc-test-reporter before-build",
     "test": "NODE_ENV=test jest --coverage --forceExit # express server fails to end process",
-    "posttest": "cc-test-reporter after-build --exit-code $?",
     "start": "node index.js",
     "watch": "tsc -w",
     "serve": "nodemon -e ts --watch src --exec \"yarn build && yarn start\" "
